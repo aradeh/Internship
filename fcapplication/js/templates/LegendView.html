@@ -1,0 +1,40 @@
+<div id='carbonLegendDiv' draggable=true>
+    <div>
+        <div class='closeLegend'><span>X</span></div>
+        <h5><strong><%= measureText %></strong></h5>
+        <h5>250m resolution</h5>
+    </div>
+    <div class='legendBody'>
+        <div id=''>
+            <div class='ranges'>  
+                <div>
+                    <div class='range r1'><%= range0.low %> <%= range0.hi%></div>
+                    <div class='swatch s1'></div>
+                </div>
+                <div>
+                    <div class='range r2'><span><%= range1.low %></span><% if((range1.low==='')&&(range1.hi!=='')) {print('&lt;')} %><span><%= range1.hi%></span></div>
+                    <div class='swatch s2'></div>
+                </div>
+                <div>
+                    <div class='range r3'><span><%= range2.low %></span><% if(range2.low!='') {print('&ndash;')} %><span><%= range2.hi%></span></div>
+                    <div class='swatch s3'></div>
+                </div>
+                <div>
+                    <div class='range r4'><span><%= range3.low %></span><% if(range3.low!='') {print('&ndash;')} %><span><%= range3.hi%></span></div>
+                    <div class='swatch s4'></div>
+                </div>
+                <div>
+                    <div class='range r5'><span><%= range4.low %></span><% if(range4.low!='') {print('&ndash;')} %><span><%= range4.hi%></span></div>
+                    <div class='swatch s5'></div>
+                </div>
+                <div>
+                    <div class='range r6'><span><%= range5.hi %></span><% if((range5.low!=='')&&(range5.hi==='')) {print('&gt;')} %><span><%= range5.low%></span></div>
+                    <div class='swatch s6'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=''>
+
+    </div>
+</div>

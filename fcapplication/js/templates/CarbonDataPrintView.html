@@ -1,0 +1,19 @@
+<div id='cdpv'>
+    <div class=''>
+        <button type='button' class='close'><span>&times;</span></button>
+        <h3 class=''>Carbon Summary
+				<% if((areaType != undefined) && (areaType == 'Radius' ) ){ %>
+                    - circular area at longitude/latitude: <%= lon %>, <%= lat %>
+				<% } else { %>
+                    - by United States county 
+				<% } %>
+        </h3>
+    </div>
+    <div class='printable'>
+        <div><img id='printPngImg'></div>
+        <hr>
+        <div class='brk' id='carbonDataPrint'></div>
+        <div class='brk' id='monetaryValuePrint'></div>
+        <div class='brk' id='equivalentsPrint'></div>
+    </div>
+</div>

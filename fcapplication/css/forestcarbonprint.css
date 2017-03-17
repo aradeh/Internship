@@ -1,0 +1,66 @@
+/* Carbon Data PRINT View */
+	body > div:not(#cdpv) {
+	  display: none;
+	}
+    html * {
+	  float: none;
+    }
+
+#carbonResultsMdl {
+	display: none !important;
+}
+
+  #map {
+    display: none !important;
+  }
+
+  .modal {
+    display: none;
+  }
+
+  .equivs {
+  }
+/*
+  #printPng  {
+    margin: auto;
+    display: block !important;
+  }
+  
+  #printPngImg  {
+    width: 80%;
+    display: block !important;
+  }
+
+  .pieLegendPrint {
+    display: block;
+  }
+*/
+    #cdpv {
+        display: block !important;
+        margin: 2em;
+        padding: 1em;
+        visibility: visible !important;
+        overflow: visible !important;
+        position: absolute;
+    }
+    #cdpv * {
+        visibility: visible !important;
+    }
+   
+    
+#cdpv button {
+    display: none !important;
+}
+
+
+#cdpv div.brk {
+    page-break-after: always !important;
+    /*
+    border: 2px solid yellow;
+    */
+}
+
+#carbonDataPrint {
+    page-break-after: always;
+}
+

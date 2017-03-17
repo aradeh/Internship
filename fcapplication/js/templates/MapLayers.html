@@ -1,0 +1,49 @@
+<div class='modal' id='mapLayersModal'>
+	<div class='modal-dialog modal-sm'>
+		<div class='modal-content'>
+			<div class='modal-header'>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title'>Map Layers</h4>
+			</div>
+			<div class='modal-body'>
+					<form id="mapLayersForm">
+						<p>Choose a base map:</p>
+						<div class="form-group" id=>
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='osmLayer'> Street Map
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='bingLayer' checked> Bing
+								</label>
+							</div>
+
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='mapQuestLayer' autocomplete="off"> MapQuest
+								</label>
+							</div>
+						</div>
+						<p>Show or hide layers:</p>
+						<div class="form-group">
+							<div class="checkbox">
+							 	<label><input type="checkbox" value="carbonLayer" >Carbon Map</label>
+							</div>		
+							<div class="checkbox">
+							 	<label><input type="checkbox" value="countiesLayer" checked>Counties</label>
+							</div>
+							<div class="checkbox">
+							 	<label><input type="checkbox" value="stateLayer" checked>States</label>
+							</div>					
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button class="btn btn-default" data-dismiss="modal">Done</button>
+			</div>
+		</div>
+	</div>
+</div>

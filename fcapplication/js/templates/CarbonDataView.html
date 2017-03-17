@@ -1,0 +1,33 @@
+
+<div class='modal' id='carbonResultsMdl'>
+	<div class='modal-dialog modal-lg'>
+		<div class='modal-content'>
+			<div class='modal-header mdlTitle'>
+				<button type='button' class='printBtn close glyphicon glyphicon-print'><span></span></button> 
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title'>Carbon Summary</h4>
+			</div>
+			<div class='modal-body'>
+				<div id='carbonDataView' role='tabpanel'>
+					<div class='cTotal'>  <ul class='nav nav-tabs' role='tablist'>
+						<li role='presentation' class='active'><a href='#carbonData' aria-controls='carbonData' role='tab' data-toggle='tab'>Amount</a></li>
+						<li role='presentation'><a href='#monetaryValue' aria-controls='monetaryValue' role='tab' data-toggle='tab'>Value</a></li>
+						<li role='presentation'><a href='#equivalents' aria-controls='equivalents' role='tab' data-toggle='tab'>Equal To</a></li>
+						<!--<li role='presentation'><a href='#charts' aria-controls='charts' role='tab' data-toggle='tab'>Charts</a></li>-->
+						</ul>
+					</div>
+					<div class='tab-content'>
+						<div role='tabpanel' class='tab-pane active' id='carbonData'></div>
+						<div role='tabpanel' class='tab-pane' id='monetaryValue'></div>
+						<div role='tabpanel' class='tab-pane' id='equivalents'></div>
+						<!-- <div role='tabpanel' class='tab-pane' id='charts'></div> -->
+					</div>
+
+				</div>
+			</div>
+			<div class='modal-footer'>
+
+			</div>
+		</div>
+	</div>
+</div> 

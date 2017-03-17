@@ -1,0 +1,22 @@
+Forest Carbon App readme
+
+
+=== the application:
+
+The Forest Carbon App is a JavaScript-based mobile web application with the following characteristics:
+
+- require.js loader, AMD modules based on Revealing Module Pattern
+- OpenLayers 3 for web mapping
+- Bootstrap for UI
+
+
+
+=== server and API:
+
+web map and wfs server are implemented with geoserver
+
+- see separate repo, fcapi, for service details
+
+
+
+ 

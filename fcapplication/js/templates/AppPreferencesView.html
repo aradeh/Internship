@@ -1,0 +1,82 @@
+
+<div class='modal' id='appPreferencesModal'>
+	<div class='modal-dialog modal-sm'>
+		<div class='modal-content'>
+			<div class='modal-header mdlTitle'>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title'>Settings</h4>
+			</div>
+			<div class='modal-body'>
+				<form id="appPreferencesForm">
+						<p>Select a cabon map to display:</p>
+						<div class="form-group">
+                            <div class="shCarbon">
+                                <div class="radio">
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_TOTAL" <% if(carbonLayerVisible['carbonLayer_TOTAL']){ print('checked'); } %>>ALL LAYERS</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_ag" <% if(carbonLayerVisible['carbonLayer_ag']){ print('checked'); } %>>- Aboveground live tree</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_bg" <% if(carbonLayerVisible['carbonLayer_bg']){ print('checked'); } %>>- Belowground live tree</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_us" <% if(carbonLayerVisible['carbonLayer_us']){ print('checked'); } %>>- Understory vegetation</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_dd" <% if(carbonLayerVisible['carbonLayer_dd']){ print('checked'); } %>>- Downed dead wood</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_lt" <% if(carbonLayerVisible['carbonLayer_lt']){ print('checked'); } %>>- Forest floor</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_so" <% if(carbonLayerVisible['carbonLayer_so']){ print('checked'); } %>>- Soil organic carbon</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_sd" <% if(carbonLayerVisible['carbonLayer_sd']){ print('checked'); } %>>- Standing dead tree</label>
+                                    <label><input type="radio" name='shCarbonLayer' value="carbonLayer_OFF" <% if(carbonLayerVisible['carbonLayer_OFF']){ print('checked'); } %>>Hide carbon map</label>
+                                </div>		
+                            </div>
+                            <hr>
+                        </div>
+						<div class="form-group">
+						    <p>Show carbon legend:</p>
+							<div class="checkbox">
+							 	<label><input type="checkbox" name='shLegend' value="legend" <% if(carbonLegendVisible){ print('checked="checked"'); } %>>Carbon Legend</label>
+							</div>					
+                            <hr>
+						</div>
+						<div class="form-group">
+						    <p>Show borders:</p>
+							<div class="checkbox">
+							 	<label><input type="checkbox" name='shLayer' value="countyLayer" <% if(countyVisible){ print('checked'); } %>>Counties</label>
+							</div>
+							<div class="checkbox">
+							 	<label><input type="checkbox" name='shLayer' value="stateLayer" <% if(statesVisible){ print('checked'); } %>>States</label>
+							</div>		
+
+							<hr>
+						</div>
+                        <div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-default <% if(measureSystem=='Metric'){ print('active'); } %>">
+								<input type="radio" name="measureSystem" id="Metric" value='Metric' autocomplete="off" <% if(measureSystem=='Metric'){ print('checked'); } %>> Metric
+							</label>
+							<label class="btn btn-default  <% if(measureSystem=='US'){ print('active'); } %>">
+								<input type="radio" name="measureSystem" id="US" value='US' autocomplete="off"  <% if(measureSystem=='US'){ print('checked'); } %>> US
+							</label>
+                            <hr>
+						</div>
+						<p><br>Choose a base map:</p>
+						<div class="form-group" id=>
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='osmLayer' <% if(basemap=='osmLayer'){ print('checked'); } %>> Street Map
+								</label>
+							</div>
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='bingLayer' <% if(basemap=='bingLayer'){ print('checked'); } %>> Bing
+								</label>
+							</div>
+
+							<div class="radio">
+								<label>
+									<input type="radio" name="basemap" value='mapQuestLayer' autocomplete="off" <% if(basemap=='mapQuestLayer'){ print('checked'); } %>> MapQuest
+								</label>
+							</div>
+						</div>	
+					</form>
+				</div>
+				<div class="modal-footer">
+					<!--<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="submit" class="btn btn-default" form='appPreferencesForm'>Done</button>-->
+			</div>
+		</div>
+	</div>
+</div>

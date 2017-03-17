@@ -1,0 +1,119 @@
+<div class="panel panel-default">
+	<div class="panel-heading" role="tab" id="heading-<%= geoid %>">
+		<h4 class="panel-title">
+			<a data-toggle="collapse" href="#col-<%= geoid %>" aria-expanded="true" aria-controls="col-<%= name %>">
+				<%= name %>: <%= grandTotal %>    
+				<% if(	measureSystem == 'US' ){ %>
+											Tons (US)
+										<% } else { %>
+											Tonnes (Metric)
+										<% } %> 
+
+										of carbon across
+				 						
+				 						<%
+										if(	measureSystem == 'US' ){
+											print (areaac); %> 
+											ac
+										<% } else {  
+											print (areaha); %>
+											ha
+										<% } 
+				%>
+										of land
+			</a>
+		</h4>
+	</div>
+	<div id="col-<%= geoid %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-<%= geoid %>">
+		<div class="panel-body">
+			<div class="container-fluid">
+				<div class="row-fluid ">
+					<div class="col-md-8">
+						<table class='table table-hover table-striped carbonDataSet'>
+							<thead>
+								<tr>
+									<th width='40%'>Carbon Source</th>
+									<th>Density per<%
+										if(	measureSystem == 'US' ){ %> 
+											acre 
+										<% } else {  %>
+											 hectare
+										<% } %>
+									</th>
+									<th><% if(	measureSystem == 'US' ){ %>
+											Tons
+										<% } else { %>
+											Tonnes
+										<% } %>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr data-toggle="tooltip" title="Live tree carbon that is above ground" class='livingTrees carbonDataRow'>
+									<td><div class='carbonDataPool'>Aboveground live tree:</div></td>
+									<td><%= dataVals.livingTreesArea %></td>
+									<td><%= dataVals.livingTrees %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Dead wood that is lying on the ground such as logs" class='deadWood carbonDataRow'>
+									<td><div class='carbonDataPool'>Downed dead wood:</div></td>
+									<td><%= dataVals.deadWoodArea %></td>
+									<td><%= dataVals.deadWood %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Biomass in standing dead trees" class='standingDead carbonDataRow'>
+									<td><div class='carbonDataPool'>Standing dead tree:</div></td>
+									<td><%= dataVals.standingDeadArea %></td>
+									<td><%= dataVals.standingDead %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Carbon in mineral soils" class='soil carbonDataRow'>
+									<td><div class='carbonDataPool'>Soil organic carbon:</div></td>
+									<td><%= dataVals.soilArea %></td>
+									<td><%= dataVals.soil %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Detritus on the forest floor including leaves, decaying material, and fine twigs" class='leafLitter carbonDataRow'>
+									<td><div class='carbonDataPool'>Forest floor:</div></td>
+									<td><%= dataVals.leafLitterArea %></td>
+									<td><%= dataVals.leafLitter %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Carbon in the living vegetation that is not considered a tree, both above and below ground" class='understory carbonDataRow'>
+									<td><div class='carbonDataPool'>Understory vegetation:</div></td>
+									<td><%= dataVals.understoryArea %></td>
+									<td><%= dataVals.understory %></td>
+								</tr>
+								<tr data-toggle="tooltip" title="Carbon in the living vegetation that is not considered a tree, both above and below ground" class='belowground carbonDataRow'>
+									<td><div class='carbonDataPool'>Belowground live tree:</div></td>
+									<td><%= dataVals.belowgroundArea %></td>
+									<td><%= dataVals.belowground %></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class='pieLegendPrint'>
+                        <br><br><br>
+						<table class='table table-hover table-striped carbonDataSet hidden'>
+							<tbody>
+								<tr>
+									<td>Living Trees:</td><td><%= (parseFloat(dataVals.livingTrees)/parseFloat(grandTotal)) %>&#37;</td></tr>
+									<tr><td>Deadwood:</td><td><%= (parseFloat(dataVals.deadWood)/parseFloat(grandTotal)) %>&#37;</td></tr>
+									<tr><td>Standing Dead:</td><td><%= ((parseFloat(dataVals.standingDead)/parseFloat(grandTotal))*100).toFixed() %>&#37;</td></tr>
+									<tr><td>Soil:</td><td><%= ((parseFloat(dataVals.soil)/parseFloat(grandTotal))*100).toFixed() %>&#37;</td></tr>
+									<tr><td>Leaf Litter:</td><td><%= ((parseFloat(dataVals.leafLitter)/parseFloat(grandTotal))*100).toFixed() %>&#37;</td></tr>
+									<tr><td>Understory:</td><td><%= ((parseFloat(dataVals.understory)/parseFloat(grandTotal))*100).toFixed() %>&#37;</td></tr>
+									<tr><td>Belowground:</td><td><%= ((parseFloat(dataVals.belowground)/parseFloat(grandTotal))*100).toFixed() %>&#37;</td></tr>
+							</tbody>
+						</table>
+					</div>
+					<% if(type=='Totals'){ %>
+						<div class="col-md-4 charts">
+							<canvas id="pieChart" class='carbonChart pieChart' width="220" height="220" style='padding:10px'></canvas>
+						</div>
+					<% } else { %>
+						<div class="col-md-4 charts">
+							<canvas id="pieChart<%= geoid %>" class='carbonChart pieChart' width="220" height="220" style='padding:10px'></canvas>
+						</div>
+					<% } %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,511 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #677A66;
+}
+
+body {
+  background-color: #677A66;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+#map div.ol-zoomslider {
+  height: 100px !important;
+  left: .65em !important;
+}
+
+.ol-zoomslider-thumb {
+  left: -2px !important;
+}
+
+#mapLayersControl {
+    top:16em;
+    left:.5em;
+}
+
+#gotoControl {
+    top:14em;
+    left:.5em;
+}
+
+#container100 {
+  width: 100%;
+  height: 90%;
+}
+
+.btn-group>.btn.grd2 {
+	background: linear-gradient(
+  				#5f7a8D, #708fa3
+			);
+	color: rgb(225,225,225);
+  border: 1px solid;
+  border-color: rbga(255,255,255,.3);
+}
+
+.btn-group>.btn.grd2.active {
+  background: linear-gradient(
+              #aaa, #708fa3
+          );
+}
+
+.btn-group>.btn.grd2.grd2.offline {
+  background: linear-gradient(
+              red, orange
+          );
+}
+
+.carbonDataPopover {
+  width: 300px;
+  min-width: 200px;
+}
+
+/* bug fix for results after wizard - could fix with timing */
+.modal {
+    overflow-y: auto;
+}
+
+.modal-body .btn-primary {
+  text-align: left;
+}
+
+.modal-dialog.wiz {
+  width: 300px;
+}
+.mdlTitle {
+  color: white;
+  background-color:#677A66;
+}
+.mdlTitle .close {
+  opacity: 0.5;
+}
+.splashMdlBody .row {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+#splash2 .row {
+  text-align: left;
+}
+#splash3 .row {
+  text-align: left;
+}
+
+#startGpsRadius a:hover,#startRadius a:hover, #startWizCounty a:hover, #startDragCounty a:hover {
+  text-decoration: none;
+}
+
+.splashImages {
+  text-align: center;
+  padding: 20px;
+}
+
+.splashImages div {
+  padding: 5px;
+}
+
+.splashImages img {
+  margin: auto;
+ 
+  max-height: 150px;
+}
+
+#radiusCanvas {
+  display: none;
+}
+
+.titleRow div {
+    background-color: #677A66;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.titleRow>.row-fluid {
+
+}
+
+.apptitle {
+    float: right;
+}
+.apptitle:hover {
+    cursor: pointer;
+}
+
+.regularAppTitle {
+
+}
+.mobileAppTitle {
+    display: none;
+}
+@media (max-width: 550px) {
+  .regularAppTitle {
+    display: none;
+  }
+ .mobileAppTitle {
+    display: inline-block;
+  } 
+}
+
+#alertDone {
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 8px;
+    opacity: .8;
+    color: #fff;
+    background-color: #5f7a8D;
+    position: relative;
+    bottom: 80px;
+    width: 90%;
+    height: 80px;
+    margin: auto;
+}
+#alertDone div{
+    display: inline-block;
+}
+#alertDone button {
+  padding: 3px 3px;
+  margin-bottom: 8px;
+}
+#alertDone button.close{
+  opacity: .7;
+}
+#alertXY button.close{
+  display: inline-block;
+}
+
+#carbonLegend {
+  position: absolute;
+  cursor: move;
+  top: 80px;
+  right: 80px;
+  height: 100px;
+  width: 100px;
+}
+#carbonLegend img {
+  
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+#dragRadiusHover {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 40px;
+    padding: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(100,130,200,.8);
+}
+
+#splashMdl .modal-footer {
+  text-align: center;
+}
+
+/* carbon data view styles */ 
+
+/* Carbon Data View */
+#carbonResultsMdl .modal-dialog {
+    min-width: 270px;
+    width: 85%;
+}
+
+@media (max-width: 460px) {
+  /* Carbon Data View - small screen */
+  #carbonResultsMdl, #splashMdl {
+    padding: 0px !important;
+  }
+  #carbonResultsMdl .modal-dialog, #splashMdl .modal-dialog {
+    width: auto;
+    margin: 2px;
+    padding: 0px;
+  }
+  .modal-dialog .nav-tabs a {
+    padding: 5px;
+  }
+  .splashImages img {
+    margin: auto;
+    max-width: 80px;
+    width: 80px;
+  }
+  #carbonLegend {
+    position: absolute;
+    top:60px;
+    right: 50px;
+  }
+  #carbonLegend img {
+
+  }
+}
+
+.printBtn {
+  position: relative;
+  right: 50px; 
+}
+
+/* Carbon Data PRINT View  moved styles to another sheet*/
+@media print {
+}
+
+
+/* color schemes */
+.livingTrees {/*454545 566E32 BABABA 961514*/
+  color: #56B95C; 
+  font-weight: bold;
+}
+.standingDead {
+  color: #521D12; 
+  font-weight: bold;
+}
+.deadWood {
+  color: #961514; 
+  font-weight: bold;
+}
+.soil {
+  color: #382016; 
+  font-weight: bold;
+}
+.leafLitter {
+  color: #E0B249; 
+  font-weight: bold;
+}
+.understory {
+  color: #6F7F32; 
+  font-weight: bold;
+}
+.belowground {
+  color: #326E36; 
+  font-weight: bold;
+}
+
+.carbonDataRow :hover{
+  background-color: #738F68;
+  color: #fff; 
+}
+
+.equivs,.carbonValue,.charts{
+  text-align: center;;
+  padding: 20px;
+  color: #454545;
+}
+.equivs h4, .equivs h3, .carbonValue h4, .carbonValue h2  {
+  color: #566E32;
+}
+.carbonChart {
+  text-align: center;
+  padding: 20px;
+}
+
+/* END carbon data view  */ 
+
+/* loading indicator */
+
+@-moz-keyframes fadein {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0.2;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0.2;
+  }
+}
+
+.fadeAnimation {
+  -moz-animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -moz-animation-name: fadein;
+  -webkit-animation-name: fadein;
+  animation-name: fadein;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+#spinner {
+  background-color:#5f7a8D;
+  color:white;
+  visibility:visible;
+  padding:10px;
+  position: absolute;
+  height:10%;
+  width:15%;
+  min-width: 100px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  text-align:center;
+  margin: auto;
+  z-index: 20000;
+}
+
+/*     END loading indicator */
+
+@font-face {
+  font-family: 'Custom Icons';
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot') format('embedded-opentype'), url('fonts/fontello.woff') format('woff'), url('fonts/fontello.ttf') format('truetype'), url('fonts/fontello.svg') format('svg');
+}
+.customicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Custom Icons';
+  font-style: normal;
+  font-weight: normal;
+  /*line-height: 1;*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*legend*/
+#carbonLegendDiv {
+    position: absolute;
+    display: none;
+    top:    80px;
+    right:   80px;
+    width: 150px;
+    height: 200px;
+    padding: 5px;
+    font-size: .8em;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    background-color: rgba(255,255,255,.8);
+    z-index: 50;
+}
+
+#carbonLegendDiv  .h4 {
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #677A66;
+    font-color: #FFF;
+}
+
+#carbonLegendDiv  .legendBody {
+    /*padding: 5px;
+*/    background-color: rgba(230,230,230,.5);
+}
+
+#carbonLegendDiv  .ranges {
+    float: left;
+    display: inline-block;
+    width: 90%;
+}
+
+#carbonLegendDiv  .range{
+    display: inline-block;
+    height: 1em;
+    line-height: 1em;
+    overflow: visible;
+    width: 70%;
+    text-align: right;
+}
+
+#carbonLegendDiv  .swatch{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    width: 1.8em;
+    height: 1em;
+    border: 1px solid #333;
+}
+
+#carbonLegendDiv .range span:nth-of-type(1){
+    width: 40%;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+}
+#carbonLegendDiv .range span:nth-of-type(2){
+    width: 40%;
+    float: right;
+    display: inline-block;
+}
+
+#carbonLegendDiv  .s1 {
+    background-color: white;
+}
+#carbonLegendDiv  .s2 {
+    background-color: #ccc;
+}
+#carbonLegendDiv  .s3 {
+    background-color: #828282;
+}
+#carbonLegendDiv  .s4 {
+    background-color: #feefbf;
+}
+#carbonLegendDiv  .s5 {
+    background-color: #e69865;
+}
+#carbonLegendDiv  .s6 {
+    background-color: #417044;
+}
+
+#carbonLegendDiv  .closeLegend {
+    height: 1em;
+    width: 100%;
+}
+#carbonLegendDiv  .closeLegend span {
+    float: right;
+    cursor: pointer;
+}
+/* */
+/*  */
+#appPreferencesForm input[type="radio"] {
+    margin-left: -17px !important;
+}
+#appPreferencesForm .shCarbon label{
+    display: block;
+}
+
+#cdpv {
+    position:fixed;
+    z-index:100000;
+    width: 100%;
+    height: 100%; 
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    overflow-y: scroll;
+    padding: 30px;
+}
+
+#cdpv button.close {
+    margin-right: 1.2em !important;
+    font-size: 2em !important;
+}
+

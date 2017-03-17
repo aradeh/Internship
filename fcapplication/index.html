@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" manifest='offline.appcache'>
+<head>
+	<title>Forest Carbon Xplorer</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width">
+
+	<link href="js/libs/bootstrap/css/bootstrap.css" rel="stylesheet" type='text/css' media="screen">
+	<link href="js/libs/ol/ol.css" rel="stylesheet" type='text/css' media="screen">
+	<link href="css/forestcarbon.css" rel="stylesheet" media="screen, print" type="text/css">
+	<link href="css/forestcarbonprint.css" rel="stylesheet" media="print" type="text/css">
+
+
+</head>
+<body>
+	<div id='container100'>
+		<div id='titleRow' class="container-fluid titleRow">
+			<div class="row-fluid ">
+				<div class="col-md-12">
+					<div class="btn-group">
+						<button id="btnGetStarted" class="btn grd2 glyphicon glyphicon-modal-window" title="Get Carbon"></button>
+						<button id="btnDragSelect" class="btn grd2 glyphicon glyphicon-hand-down" title="Drag-select on the map"></button>
+						<button id="btnDragRadius" class="btn grd2 glyphicon glyphicon-record" title="Draw a Radius"></button>
+						<button id="btnMapLayers" class="btn grd2 glyphicon glyphicon-th" title="Show Carbon Maps"></button>
+					</div>
+					<span class='apptitle'><span class='regularAppTitle'>Forest Carbon Xplorer</span><span class='mobileAppTitle' title="Forest Carbon Xplorer">FCX</span></span>
+				</div>
+			</div>
+		</div>
+		<div id="map" class="map"></div>
+	</div>
+
+	<!--<div id="printPng"></div>
+	<img id="printPngImg">-->
+	<div id="spinner" class="fadeAnimation" style='display:none;font-size:10px'>Loading...</div>
+
+	<div id="carbonLegend" style='display:none;'>
+		<img id="" src="img/forest_carbon_legend.png">
+	</div>
+
+	<script src="js/config.js">
+	</script>
+	
+    <script src="js/requireconfig.js">
+	 	//require config in attached script first ensures jq and bs loaded
+	</script>
+
+	<script data-main="app" src="js/libs/requirejs/require.js"></script>
+
+	<script type="text/javascript">
+		var map;
+	</script>
+
+	<div style='display:none' id="alertDone">
+		<div style='display:inline-block;width:60%;overflow:auto;height:80%' id='alertXY'></div>
+		<div style='display:inline-block;float:right;width:30%;text-align:right;'>
+			<button id='btnDragOK' type="button" class="btn btn-default">Get Carbon</button>
+			<button id='btnDragCancel' type="button" class="btn btn-default">Cancel</button>
+		</div>
+	</div>
+
+</body>
+</html>

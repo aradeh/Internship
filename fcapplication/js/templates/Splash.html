@@ -1,0 +1,129 @@
+
+<div class='modal fade' id='splashMdl'>
+	<div class='modal-dialog'>
+		<div class='modal-content'>
+			<div class='modal-header mdlTitle'>
+				<button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+				<h4 class='modal-title'>Welcome to the Forest Carbon Xplorer</h4>
+			</div>
+			<div class="modal-body splashMdlBody">
+				<div id='splash1' class="panel-body container-fluid">
+					<div class="row">
+						<div class="col-md-12">
+							<p>An interactive app to view and explore forest carbon in the US</p>
+						</div>
+					</div>
+					<div class="row splashImages">
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="img/USDA.png">
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="img/USFS.png">
+						</div>
+						<div class="col-xs-4 col-sm-4 col-md-4">
+							<img src="img/UofM.png">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<p>USDA Forest Service, Research and Development</p>
+							<p>University of Minnesota, Department of Forest Resources</p>
+							<p>2015</p>
+						</div>
+					</div>
+				</div>
+				<div id='splash2' class="panel-body container-fluid" style='display: none'>
+					<div class="row">
+						<div class="col-md-12">
+							<p><strong>Where does the data come from?</strong><br>&emsp;<a href='http://www.fia.fs.fed.us' target='_blank'>Forest Inventory and Analysis National Program</a></p>
+							<p><strong>Where can I find more about the data?</strong><br>&emsp;<a href='http://www.cbmjournal.com/content/8/1/1' target='_blank'>Barry Tyler Wilson's Publication on Forest Carbon Stock</a></p>
+							<p><strong>Where can I download the data?</strong><br>&emsp;<a href='http://dx.doi.org/10.2737/RDS-2013-0004' target='_blank'>Imagery Data for Forest Carbon Stock Publication</a></p>
+							<p><strong>Where can I learn more about forest carbon?</strong><br>&emsp;<a href='http://www.fia.fs.fed.us/Forest%20Carbon/default.asp' target='_blank'>USFS Forest Inventory and Analysis Carbon Page</a></p>
+							<p><strong>The forest data in the app only covers the lower 48 states.</strong></p>
+						</div>
+					</div>
+					<div class="row">
+					<hr>
+						<table class='table table-hover table-striped carbonDataSet'>
+							<thead>
+								<tr>
+									<th width='40%'>Definitions of Carbon Pools</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class=''>
+									<td>Aboveground live tree</td>
+									<td>Live tree carbon that is above ground</td>
+								</tr>
+								<tr class=''>
+									<td>Belowground live tree</td>
+									<td>Live tree carbon that is below ground</td>
+								</tr>
+								<tr class=''>
+									<td>Understory vegetation</td>
+									<td>Carbon in the living vegetation that is not considered a tree, both above and below ground</td>
+								</tr>
+								<tr class=''>
+									<td>Standing dead tree</td>
+									<td>Biomass in standing dead trees</td>
+								</tr>
+								<tr class=''>
+									<td>Forest floor</td>
+									<td>Detritus on the forest floor including leaves, decaying material, and fine twigs</td>
+								</tr>
+								<tr class=''>
+									<td>Downed dead wood</td>
+									<td>Dead wood that is lying on the ground such as logs</td>
+								</tr>
+								<tr class=''>
+									<td>Soil organic carbon</td>
+									<td>Carbon in mineral soils</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<hr>
+							<h4>Forest Carbon Facts</h4>
+							<p><strong>One acre of forest contains about 50 tons of CO2</strong></p>
+						</div>
+					</div>
+				</div>
+				<div id='splash3' class="panel-body container-fluid" style='display: none'>
+					<div class="row">
+						<div class="col-md-12">
+							<p>How do you want to Xplore the nation's forest carbon?</p>
+						</div>
+					</div>
+					<div class="row">
+						<h3>By Your Location:</h3>
+					</div>
+					<div class="row">
+						<div id='startGpsRadius'><a href="#"><p><br><img src='img/iconImgWiz.png'> &nbsp;&nbsp;&nbsp;Allow app access to your location and choose your radius</p></a></div>
+					</div>
+					<div class="row">
+						<h3>By State and County:</h3>
+					</div>
+					<div class="row">
+						<div id='startWizCounty'><a href="#"><p><br><img src='img/iconImgWiz.png'> &nbsp;&nbsp;&nbsp;Select one of more counties in a list</p></a></div>
+						<div id='startDragCounty'><a href="#"><p><br><img src='img/iconImgSelectCounties.png'> &nbsp;&nbsp;&nbsp;Use the map to zoom in, tap or drag over one or more counties</p></a></div>
+					</div>
+					<div class="row">
+						<h3>By Surfing the National Map:</h3>
+					</div>
+					<div class="row">
+						<div id='startRadius'><a href="#"><p><br><img src='img/iconImgSelectRadius.png'> &nbsp;&nbsp;&nbsp;Zoom in, tap the map, and hold down to draw a radius</p></a></div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" id="btnSplashAbout">About</button>
+				<button type="button" class="btn btn-default" id="btnSplashGetStarted">Get Carbon</button>
+				<p><br>Brought to you by <a href='http://www.planitgeo.com/'>plan-it GEO</a></p>
+				<p>Funding supported by the <a href='http://www.fs.fed.us/' target='_blank'>USDA Forest Service</a><br>and <a href='http://www.research.umn.edu/umii/' target='_blank'>University of Minnesota Informatics Institute</a></p>
+			</div>
+		</div>
+	</div>
+</div>
